@@ -49,6 +49,29 @@
       margin: 0 auto;
       padding: 4rem 5%;
     }
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap-reverse;
+    }
+    .about-text-content {
+      flex: 1;
+      min-width: 300px;
+    }
+    .profile-pic {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--border);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    @media (max-width: 768px) {
+      .about-container { flex-direction: column-reverse; text-align: center; }
+      .profile-pic { width: 180px; height: 180px; }
+    }
     h1 { font-size: 2.8rem; color: #ffffff; margin-bottom: 0.2rem; }
     h2 { font-size: 1.8rem; color: #ffffff; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin-top: 3.5rem; }
     .subtitle { color: var(--accent); font-size: 1.2rem; font-weight: 500; margin-bottom: 1.5rem; }
@@ -97,16 +120,22 @@
   </header>
 
   <main>
-    <section id="about">
-      <h1>Ardalan Gerami</h1>
-      <div class="subtitle">AI & Signal Processing Specialist | Quantitative Developer</div>
-      <p class="about-text">
-        Electrical Engineering graduate from Sharif University of Technology with a focus on deep learning, RAG pipelines, and financial time-series modeling. I combine strong mathematical foundations with practical experience building and deploying algorithmic architectures to analyze complex market behavior. When I step away from my IDE, I enjoy exploring theoretical physics, historical non-fiction, and classical Persian poetry, finding a unique balance between analytical rigor and artistic expression.
-      </p>
-      <div class="contact-links">
-        <a href="https://github.com/ArdalanGerami">GitHub</a> &bull;
-        <a href="https://www.linkedin.com/in/ardalan-gerami-28090122b/">LinkedIn</a> &bull;
-        <a href="mailto:ardalan.z.g.r@gmail.com">Email</a>
+    <section id="about" class="about-container">
+      <div class="about-text-content">
+        <h1>Ardalan Gerami</h1>
+        <div class="subtitle">AI & Signal Processing Specialist | Quantitative Developer</div>
+        <p class="about-text">
+          Electrical Engineering graduate from Sharif University of Technology with a focus on deep learning, RAG pipelines, and financial time-series modeling. I combine strong mathematical foundations with practical experience building and deploying algorithmic architectures to analyze complex market behavior. When I step away from my IDE, I enjoy exploring theoretical physics, historical non-fiction, and classical Persian poetry, finding a unique balance between analytical rigor and artistic expression.
+        </p>
+        <div class="contact-links">
+          <a href="https://github.com/ArdalanGerami">GitHub</a> &bull;
+          <a href="https://www.linkedin.com/in/ardalan-gerami-28090122b/">LinkedIn</a> &bull;
+          <a href="mailto:ardalan.z.g.r@gmail.com">Email</a>
+        </div>
+      </div>
+      
+      <div>
+        <img src="profile.jpg" alt="Ardalan Gerami" class="profile-pic">
       </div>
     </section>
 
